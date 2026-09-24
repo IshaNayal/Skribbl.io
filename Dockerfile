@@ -10,6 +10,7 @@ RUN npm install --omit=dev
 # Copy server source code and compiled Flutter Web distribution
 WORKDIR /app
 COPY server/ ./server/
+COPY assets/ ./assets/
 COPY build/web ./build/web
 
 ENV PORT=3000

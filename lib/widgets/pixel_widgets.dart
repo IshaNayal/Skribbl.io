@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skribbl_io/services/audio_service.dart';
 import 'package:skribbl_io/theme/pixel_theme.dart';
 
 /// Interactive 3D Pixel Button that compresses on tap
@@ -259,6 +260,44 @@ class PixelThemeToggle extends StatelessWidget {
           backgroundColor: isDark ? PixelTheme.accentYellow : PixelTheme.primaryPink,
           textColor: isDark ? PixelTheme.shadowDark : Colors.white,
           onPressed: () => PixelTheme.toggleDarkMode(),
+        );
+      },
+    );
+  }
+}
+
+/// A cute pixel audio toggle button for playing/muting background music
+class PixelAudioToggle extends StatelessWidget {
+  final double height;
+  final double? width;
+  final double fontSize;
+
+  const PixelAudioToggle({
+    super.key,
+    this.height = 36,
+    this.width,
+    this.fontSize = 10,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<bool>(
+      valueListenable: AudioService.instance.isMuted,
+      builder: (context, isMuted, _) {
+        return ValueListenableBuilder<bool>(
+          valueListenable: AudioService.instance.isMusicPlaying,
+          builder: (context, isPlaying, _) {
+            final active = !isMuted && isPlaying;
+            return PixelButton(
+              text: active ? '🎵 BGM' : '🔇 MUTED',
+              fontSize: fontSize,
+              height: height,
+              width: width,
+              backgroundColor: active ? PixelTheme.accentMint : PixelTheme.bgCard,
+              textColor: active ? PixelTheme.borderDark : (PixelTheme.isDark ? Colors.grey.shade400 : Colors.grey.shade600),
+              onPressed: () => AudioService.instance.toggleMute(),
+            );
+          },
         );
       },
     );

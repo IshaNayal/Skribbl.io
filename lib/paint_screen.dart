@@ -524,6 +524,10 @@ class _PaintScreenState extends State<PaintScreen> {
                                 ),
                                 const SizedBox(width: 8),
 
+                                // Audio Toggle
+                                const PixelAudioToggle(height: 38, fontSize: 8),
+                                const SizedBox(width: 8),
+
                                 // Dark Mode Toggle
                                 const PixelThemeToggle(height: 38, fontSize: 8),
                               ],

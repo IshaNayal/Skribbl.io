@@ -109,8 +109,13 @@ class _CreateRoomScreenState extends State<CreateRoomScreen> {
               ),
             ),
             actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 14, top: 8, bottom: 8),
+              const Padding(
+                padding: EdgeInsets.only(top: 8, bottom: 8),
+                child: PixelAudioToggle(height: 36, fontSize: 10),
+              ),
+              const SizedBox(width: 8),
+              const Padding(
+                padding: EdgeInsets.only(right: 14, top: 8, bottom: 8),
                 child: PixelThemeToggle(height: 36, fontSize: 10),
               ),
             ],

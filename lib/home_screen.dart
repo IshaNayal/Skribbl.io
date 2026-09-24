@@ -76,7 +76,14 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
             top: 14,
             right: 14,
             child: SafeArea(
-              child: PixelThemeToggle(height: 34, fontSize: 10),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  PixelAudioToggle(height: 34, fontSize: 10),
+                  SizedBox(width: 8),
+                  PixelThemeToggle(height: 34, fontSize: 10),
+                ],
+              ),
             ),
           ),
           SafeArea(
@@ -138,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
                       // Cute Mascot Window
                       PixelWindow(
-                        title: 'TAMAGOTCHI LOUNGE',
+                        title: 'Lets playyyyyy!!',
                         backgroundColor: PixelTheme.lightPastelPink,
                         padding: 16,
                         child: Column(
@@ -150,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                 SizedBox(width: 8),
                                 Text('🎨', style: TextStyle(fontSize: 32)),
                                 SizedBox(width: 8),
-                                Text('🐾', style: TextStyle(fontSize: 24)),
+                                
                               ],
                             ),
                             const SizedBox(height: 12),

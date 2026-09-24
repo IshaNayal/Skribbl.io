@@ -4,9 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:skribbl_io/create_room_screen.dart';
 import 'package:skribbl_io/home_screen.dart';
 import 'package:skribbl_io/join_room_screen.dart';
+import 'package:skribbl_io/services/audio_service.dart';
 import 'package:skribbl_io/theme/pixel_theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  AudioService.instance.initialize();
+
   if (kIsWeb) {
     try {
       final theme = Uri.base.queryParameters['theme'];
@@ -53,6 +57,12 @@ class MyApp extends StatelessWidget {
             textTheme: GoogleFonts.silkscreenTextTheme(),
             useMaterial3: true,
           ),
+          builder: (context, child) {
+            return Listener(
+              onPointerDown: (_) => AudioService.instance.onUserInteraction(),
+              child: child ?? const SizedBox.shrink(),
+            );
+          },
           home: home,
         );
       },

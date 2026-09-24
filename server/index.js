@@ -99,6 +99,13 @@ if (fs.existsSync(buildPath)) {
   console.log('Serving Flutter Web app from:', buildPath);
 }
 
+const audioPath = path.join(__dirname, "../assets/audio");
+if (fs.existsSync(audioPath)) {
+  app.use('/assets/audio', express.static(audioPath));
+  app.use('/assets/assets/audio', express.static(audioPath));
+  app.use('/audio', express.static(audioPath));
+}
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
