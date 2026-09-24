@@ -1,0 +1,8 @@
+{
+  "name": "skribbl-io",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix server start",
+    "dev": "npm --prefix server run dev"
+  }
+}
