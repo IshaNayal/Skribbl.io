@@ -52,6 +52,20 @@ Whether playing together on the same Wi-Fi router or across different continents
 
 ---
 
+## 📸 Screenshots & UI Showcase
+
+### 🏠 Home Screen (Tamagotchi Lounge)
+| 🍓 Light Mode | 🌙 Dark Mode |
+| :---: | :---: |
+| <img src="docs/screenshots/home_light.png" alt="Home Screen - Light Mode" width="480"/> | <img src="docs/screenshots/home_dark.png" alt="Home Screen - Dark Mode" width="480"/> |
+
+### 🎮 Room Creation & Joining
+| 🎲 Create Room (Light) | 🌙 Create Room (Dark) | 🏷️ Join Room (Paste Support) |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/create_room.png" alt="Create Room - Light Mode" width="310"/> | <img src="docs/screenshots/create_room_dark.png" alt="Create Room - Dark Mode" width="310"/> | <img src="docs/screenshots/join_room.png" alt="Join Room Screen" width="310"/> |
+
+---
+
 ## 🎨 Cute Pixel Art Theme
 
 | Mode | Background | Windows / Cards | Borders & Shadows | Primary Accents |
