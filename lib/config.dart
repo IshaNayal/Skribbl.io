@@ -12,10 +12,16 @@ class AppConfig {
       try {
         final origin = Uri.base.origin;
         if (origin.isNotEmpty && origin != 'null') {
+          // When running via 'flutter run -d chrome', Flutter dev server runs on a random dev port.
+          // In that case, route Socket.IO traffic to the backend server on port 3000.
+          if ((Uri.base.host == 'localhost' || Uri.base.host == '127.0.0.1') &&
+              Uri.base.port != 3000) {
+            return 'http://127.0.0.1:3000';
+          }
           return origin;
         }
       } catch (_) {}
-      return 'http://$hostIp:3000';
+      return 'http://127.0.0.1:3000';
     }
     try {
       if (Platform.isAndroid || Platform.isIOS) {
@@ -23,8 +29,8 @@ class AppConfig {
         return 'http://$hostIp:3000';
       }
     } catch (_) {}
-    // Windows desktop, macOS, Linux
-    return 'http://localhost:3000';
+    // Windows desktop, macOS, Linux - use 127.0.0.1 to avoid IPv6 resolution issues on Windows
+    return 'http://127.0.0.1:3000';
   }
 
   static String get serverUrl {

@@ -339,7 +339,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(port, "0.0.0.0", () => {
+server.listen(port, () => {
   console.log('Server started and running on port ' + port);
 });
 
