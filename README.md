@@ -1,4 +1,4 @@
-# 🎀 Skribbl.io - Cute Pink Pixel Art Edition 🎨💖   https://continue-greene-persistent-otherwise.trycloudflare.com/
+# 🎀 Skribbl.io - Cute Pink Pixel Art Edition 🎨💖  
 
 <div align="center">
 
