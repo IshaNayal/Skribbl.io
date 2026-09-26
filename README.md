@@ -1,11 +1,11 @@
-# 🎀 Skribbl.io - Cute Pink Pixel Art Edition 🎨💖  
+# 🎀 Skribbl.io — Cute Pink Pixel Art Edition 🎨💖
 
 <div align="center">
 
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge\&logo=flutter\&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge\&logo=dart\&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge\&logo=socketdotio\&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
 **A real-time multiplayer drawing and guessing game built with Flutter and Node.js, styled in an adorable retro Japanese kawaii pixel-art theme.**
@@ -18,60 +18,104 @@
 
 ## 🌸 Overview
 
-**Skribbl.io Pixel Edition** reimagines the classic online multiplayer party game with a charming retro pixel-art aesthetic. One player draws a secret word on an interactive canvas, while other players guess in real time through live chat. 
+**Skribbl.io Pixel Edition** reimagines the classic online multiplayer party game with a charming retro pixel-art aesthetic.
 
-Whether playing together on the same Wi-Fi router or across different continents, friends can join instantaneously with simple **6-character alphanumeric room codes** or one-click **invite links**.
+One player draws a secret word on an interactive canvas while the other players try to guess it in real time through live chat.
+
+Whether you're playing together on the same Wi-Fi network or across different continents, friends can join instantly using simple **6-character alphanumeric room codes** or **one-click invite links**.
 
 ---
 
 ## ✨ Key Features
 
-- **💖 Cute Pink Pixel Art Aesthetic**: Custom retro UI featuring Google Fonts (`Silkscreen` and `VT323`), 3D beveled button offsets, chunky borders, and Tamagotchi lounge graphics.
-- **🌙 Reactive Dark & Light Mode**: Instant one-tap toggle between **Strawberry Milk** (Light Mode) and **Cyberpunk Midnight Plum** (Dark Mode) across all game screens without losing state.
-- **🏷️ Auto-Generated Alphanumeric Room Codes**: 6-character clean room codes (e.g. `K9X2B7`, `7P4M8K`) with:
-  - 🎲 **Re-Roll Button**: Generate new randomized codes on demand.
-  - 📋 **One-Tap Copy & Paste**: Native clipboard integration for seamless sharing.
-- **🌍 Global Multiplayer & 1-Click Invite Links**:
-  - Automatically formats shareable links: `https://<domain>/?room=K9X2B7`.
-  - Friends opening the invite link have their room code automatically pre-filled!
-  - Fully compatible with Cloudflare Tunnels, ngrok, or cloud deployments.
-- **🖌️ Real-Time Drawing Canvas**:
-  - Sub-second touch point synchronization over WebSockets.
-  - Pixel palette with quick color swatches and a full custom block color picker.
-  - Adjustable stroke widths and clear-canvas tools.
-- **💬 Live Chat & Intelligent Scoring**:
-  - Guessing chat with secret-word detection and speed-based bonus point calculations.
-  - Word blank dashes showing character counts (`_ _ _ _ _`).
-  - Animated live scoreboard and winner leaderboard.
-- **⚡ Zero-Config Dual Backend**:
-  - **In-Memory Room Store**: Runs out of the box with zero external database dependencies.
-  - **MongoDB Atlas Support**: Automatically hooks up to MongoDB if `MONGODB_URI` environment variable is provided.
-- **📱 Built-in Web SPA Hosting**:
-  - The Node.js Express server automatically hosts the compiled Flutter Web application (`build/web`).
-  - Mobile phones visiting the server address load the full Flutter client directly in Safari or Chrome without installing an APK!
+* **💖 Cute Pink Pixel Art Aesthetic**
+
+  * Custom retro UI
+  * Google Fonts: `Silkscreen` and `VT323`
+  * 3D beveled button offsets
+  * Chunky pixel borders
+  * Tamagotchi-inspired lounge graphics
+
+* **🌙 Reactive Dark & Light Mode**
+
+  * **Strawberry Milk** light mode
+  * **Cyberpunk Midnight Plum** dark mode
+  * Instant theme switching across game screens
+  * Game state remains intact while switching themes
+
+* **🏷️ Auto-Generated Room Codes**
+
+  * Clean 6-character alphanumeric codes
+  * Example: `K9X2B7`, `7P4M8K`
+  * 🎲 Re-roll button for generating new codes
+  * 📋 One-tap copy support
+
+* **🌍 Global Multiplayer**
+
+  * Play across different Wi-Fi networks
+  * Supports 4G/5G mobile connections
+  * One-click invite links
+  * Automatic room-code detection from URLs
+  * Compatible with Cloudflare Tunnel, ngrok, and cloud deployments
+
+* **🖌️ Real-Time Drawing Canvas**
+
+  * Real-time drawing synchronization using WebSockets
+  * Pixel-inspired color palette
+  * Custom color picker
+  * Adjustable stroke width
+  * Clear-canvas functionality
+
+* **💬 Live Chat & Scoring**
+
+  * Real-time guessing chat
+  * Automatic secret-word detection
+  * Speed-based bonus scoring
+  * Word-length hints such as `_ _ _ _ _`
+  * Live scoreboard
+  * Final winner leaderboard
+
+* **⚡ Zero-Config Backend**
+
+  * In-memory room storage works out of the box
+  * No database required for local gameplay
+  * Optional MongoDB Atlas support
+  * Automatically uses MongoDB when `MONGODB_URI` is provided
+
+* **📱 Built-in Flutter Web Hosting**
+
+  * Node.js Express server can serve the compiled Flutter Web application
+  * Players can open the game directly from mobile browsers
+  * No APK installation required for web gameplay
 
 ---
 
 ## 📸 Screenshots & UI Showcase
 
-### 🏠 Home Screen (Tamagotchi Lounge)
-| 🍓 Light Mode | 🌙 Dark Mode |
-| :---: | :---: |
-| <img src="docs/screenshots/home_light.png" alt="Home Screen - Light Mode" width="480"/> | <img src="docs/screenshots/home_dark.png" alt="Home Screen - Dark Mode" width="480"/> |
+### 🎀 Logo
+
+<img width="655" height="527" alt="Skribbl.io Logo" src="https://github.com/user-attachments/assets/36645052-b6fc-45ac-8107-8a0aa71837eb" />
+
+### 🏠 Home Screen
+
+|                                                             🎀 Logo                                                             |                                       🍓 Light Mode                                      |                                      🌙 Dark Mode                                      |
+| :-----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| <img src="https://github.com/user-attachments/assets/36645052-b6fc-45ac-8107-8a0aa71837eb" alt="Skribbl.io Logo" width="300" /> | <img src="docs/screenshots/home_light.png" alt="Home Screen - Light Mode" width="300" /> | <img src="docs/screenshots/home_dark.png" alt="Home Screen - Dark Mode" width="300" /> |
 
 ### 🎮 Room Creation & Joining
-| 🎲 Create Room (Light) | 🌙 Create Room (Dark) | 🏷️ Join Room (Paste Support) |
-| :---: | :---: | :---: |
-| <img src="docs/screenshots/create_room.png" alt="Create Room - Light Mode" width="310"/> | <img src="docs/screenshots/create_room_dark.png" alt="Create Room - Dark Mode" width="310"/> | <img src="docs/screenshots/join_room.png" alt="Join Room Screen" width="310"/> |
+
+|                                   🎲 Create Room — Light                                  |                                     🌙 Create Room — Dark                                     |                                  🏷️ Join Room                                  |
+| :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
+| <img src="docs/screenshots/create_room.png" alt="Create Room - Light Mode" width="260" /> | <img src="docs/screenshots/create_room_dark.png" alt="Create Room - Dark Mode" width="260" /> | <img src="docs/screenshots/join_room.png" alt="Join Room Screen" width="260" /> |
 
 ---
 
 ## 🎨 Cute Pixel Art Theme
 
-| Mode | Background | Windows / Cards | Borders & Shadows | Primary Accents |
-| :--- | :--- | :--- | :--- | :--- |
-| **Light Mode 🍓** | Strawberry Milk (`#FFF0F5`) | Clean Cream (`#FFFFFF`) | Dark Chocolate Plum (`#3B1A34`) | Vibrant Berry Pink (`#FF6B97`) |
-| **Dark Mode 🌙** | Midnight Plum (`#180A18`) | Cyber Slate (`#261226`) | Glowing Neon Berry (`#FF8DAF`) | Neon Yellow & Lilac |
+| Mode              | Background                | Windows / Cards       | Borders & Shadows             | Primary Accents              |
+| :---------------- | :------------------------ | :-------------------- | :---------------------------- | :--------------------------- |
+| **🍓 Light Mode** | Strawberry Milk `#FFF0F5` | Clean Cream `#FFFFFF` | Dark Chocolate Plum `#3B1A34` | Vibrant Berry Pink `#FF6B97` |
+| **🌙 Dark Mode**  | Midnight Plum `#180A18`   | Cyber Slate `#261226` | Glowing Neon Berry `#FF8DAF`  | Neon Yellow & Lilac          |
 
 ---
 
@@ -90,17 +134,18 @@ flowchart TD
     end
 
     subgraph Backend["⚡ Node.js Backend (:3000)"]
-        Express["Express 5 Web Server\n(Hosts build/web SPA)"]
-        SocketServer["Socket.IO Server\n(EIO3 & EIO4 Support)"]
-        RoomManager["Room & Turn Engine\n(Word API, Timers, Scoring)"]
+        Express["Express 5 Web Server<br/>Hosts build/web SPA"]
+        SocketServer["Socket.IO Server<br/>EIO3 & EIO4 Support"]
+        RoomManager["Room & Turn Engine<br/>Word API, Timers, Scoring"]
         Storage{{"Storage Engine"}}
-        MemStore["InMemory Store\n(Zero Setup)"]
-        Mongo["MongoDB Atlas\n(Optional)"]
+        MemStore["In-Memory Store<br/>Zero Setup"]
+        Mongo["MongoDB Atlas<br/>Optional"]
     end
 
     Host <-->|HTTP / WS| Backend
     Player1 <-->|HTTP / WS| Backend
-    Player2 <-->|HTTPS / WSS| CF <--> Backend
+    Player2 <-->|HTTPS / WSS| CF
+    CF <--> Backend
 
     SocketServer --> RoomManager
     RoomManager --> Storage
@@ -110,151 +155,300 @@ flowchart TD
 
 ---
 
-## 🚀 Quick Start
+# 🚀 Quick Start
 
-### 📋 Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (v3.0.0 or higher)
-- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
+## 📋 Prerequisites
+
+Make sure you have the following installed:
+
+* [Flutter SDK](https://docs.flutter.dev/get-started/install) `3.0.0+`
+* [Node.js](https://nodejs.org/) `16.0.0+`
+* Git
 
 ---
 
-### 1️⃣ Clone the Repository
+## 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/IshaNayal/Skribbl.io.git
 cd Skribbl.io
 ```
 
-### 2️⃣ Set Up Backend Server
+---
+
+## 2️⃣ Set Up the Backend
+
+Navigate to the server directory:
+
 ```bash
 cd server
+```
+
+Install the backend dependencies:
+
+```bash
 npm install
+```
+
+Start the server:
+
+```bash
 node index.js
 ```
-The server will start on port `3000`:
+
+The server will start on port `3000`.
+
+You should see output similar to:
+
 ```text
 Serving Flutter Web app from: .../build/web
 MONGODB_URI is not set; running with in-memory room store.
 Server started and running on port 3000
 ```
 
-> **Optional MongoDB**: If you want persistent database storage, create a `server/.env` file with `MONGODB_URI=your_mongodb_connection_string`.
+### 🍃 Optional MongoDB Setup
+
+MongoDB is **not required** for local gameplay.
+
+If you want persistent database storage, create:
+
+```text
+server/.env
+```
+
+and add:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Then restart the backend server.
 
 ---
 
-### 3️⃣ Run Flutter App
-Open a new terminal window at the project root:
+## 3️⃣ Run the Flutter App
+
+Open a **new terminal** at the project root:
 
 ```bash
-# Get Flutter packages
 flutter pub get
+```
 
-# Run on Chrome Web
+### 🌐 Run on Chrome
+
+```bash
 flutter run -d chrome
+```
 
-# OR run on Windows Desktop
+### 🪟 Run on Windows
+
+```bash
 flutter run -d windows
+```
 
-# OR run on Android device
+### 📱 Run on Android
+
+Connect an Android device or start an emulator, then:
+
+```bash
 flutter run -d android
 ```
 
 ---
 
-## 🌍 Playing Across the Globe
+# 🌍 Playing Across the Globe
 
-To host a game and invite friends from anywhere in the world (different Wi-Fi networks, 4G/5G mobile data) without configuring port forwarding:
+You can host a game and invite friends from different Wi-Fi networks, mobile data connections, or countries without configuring traditional port forwarding.
 
-### Option A: Free Cloudflare Tunnel (Recommended)
-In your terminal, run:
+## ☁️ Option A — Cloudflare Tunnel
+
+Cloudflare Tunnel is the recommended option for quick testing.
+
+With your Node.js server running on port `3000`, open another terminal and run:
+
 ```bash
 npx cloudflared tunnel --url http://localhost:3000
 ```
-This generates a secure public HTTPS URL (e.g., `https://random-subdomain.trycloudflare.com`). 
 
-1. Open the URL in your browser and click **Create**.
-2. Click **Share Link** in the waiting lobby.
-3. Send the link to friends anywhere in the world. When they click it, the room code is pre-filled and they can join with one tap!
+Cloudflare will generate a public HTTPS URL similar to:
 
-### Option B: ngrok
+```text
+https://random-subdomain.trycloudflare.com
+```
+
+### 🎮 How to Play
+
+1. Open the generated URL in your browser.
+2. Click **Create Room**.
+3. Create your game room.
+4. Click **Share Link** in the waiting lobby.
+5. Send the generated invite link to your friends.
+6. Friends open the link from anywhere in the world.
+7. The room code is automatically detected and pre-filled.
+8. Players join the room and start playing.
+
+---
+
+## 🔗 Option B — ngrok
+
+If you prefer ngrok:
+
 ```bash
 ngrok http 3000
 ```
 
+Use the generated public URL to invite players.
+
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
 Skribbl_io/
+│
 ├── lib/
-│   ├── config.dart                    # Dynamic server URL resolution & invite link generator
-│   ├── create_room_screen.dart        # Host room setup with auto-generated alphanumeric code
-│   ├── final_leaderboard.dart         # Retro podium and winner display
-│   ├── home_screen.dart               # Tamagotchi Lounge menu & room actions
-│   ├── join_room_screen.dart          # Join lobby with clipboard paste button
-│   ├── main.dart                      # App entry point with reactive ValueListenableBuilder
+│   ├── config.dart
+│   │   └── Dynamic server URL resolution & invite link generator
+│   │
+│   ├── create_room_screen.dart
+│   │   └── Host room setup with auto-generated room codes
+│   │
+│   ├── final_leaderboard.dart
+│   │   └── Retro podium and winner display
+│   │
+│   ├── home_screen.dart
+│   │   └── Tamagotchi Lounge menu & room actions
+│   │
+│   ├── join_room_screen.dart
+│   │   └── Join lobby with clipboard paste support
+│   │
+│   ├── main.dart
+│   │   └── App entry point
+│   │
 │   ├── models/
-│   │   ├── my_custom_painter.dart     # Canvas painter for smooth touch lines
-│   │   └── touch_points.dart          # Touch coordinate & stroke data model
-│   ├── paint_screen.dart              # Main game screen (drawing canvas, chat, timer, tools)
+│   │   ├── my_custom_painter.dart
+│   │   │   └── Canvas painter for smooth touch lines
+│   │   │
+│   │   └── touch_points.dart
+│   │       └── Touch coordinate & stroke data model
+│   │
+│   ├── paint_screen.dart
+│   │   └── Main game screen
+│   │
 │   ├── sidebar/
-│   │   └── player_scoreboard__drawer.dart # In-game live scoreboard drawer
+│   │   └── player_scoreboard__drawer.dart
+│   │       └── In-game live scoreboard drawer
+│   │
 │   ├── theme/
-│   │   └── pixel_theme.dart           # Pixel art palette, dynamic dark/light getters, fonts
+│   │   └── pixel_theme.dart
+│   │       └── Pixel palette, themes & fonts
+│   │
 │   ├── utils/
-│   │   └── room_code_generator.dart   # 6-character alphanumeric code generator & parser
-│   ├── waiting_lobby_screen.dart      # Roster lobby with copy code & invite link buttons
+│   │   └── room_code_generator.dart
+│   │       └── Room code generation & URL parsing
+│   │
+│   ├── waiting_lobby_screen.dart
+│   │   └── Roster lobby with copy code & invite link
+│   │
 │   └── widgets/
-│       ├── custom_text_field.dart     # Retro themed pixel input field
-│       └── pixel_widgets.dart         # PixelButton, PixelWindow, PixelBadge, PixelThemeToggle
+│       ├── custom_text_field.dart
+│       │   └── Retro-themed pixel input field
+│       │
+│       └── pixel_widgets.dart
+│           └── PixelButton, PixelWindow, PixelBadge,
+│               PixelThemeToggle
 │
 ├── server/
 │   ├── api/
-│   │   └── getWord.js                 # Random secret word dictionary generator
+│   │   └── getWord.js
+│   │       └── Random secret word generator
+│   │
 │   ├── models/
-│   │   ├── Player.js                  # Player schema
-│   │   └── Room.js                    # Mongoose Room schema
-│   ├── index.js                       # Express 5 + Socket.IO + In-Memory Room Store
-│   └── package.json                   # Backend dependencies
+│   │   ├── Player.js
+│   │   │   └── Player schema
+│   │   │
+│   │   └── Room.js
+│   │       └── Mongoose Room schema
+│   │
+│   ├── index.js
+│   │   └── Express + Socket.IO + Room Store
+│   │
+│   └── package.json
 │
-└── test/
-    ├── room_code_generator_test.dart  # Unit tests for code generation & URL parsing
-    └── widget_test.dart               # Widget tests for room flows & buttons
+├── test/
+│   ├── room_code_generator_test.dart
+│   │   └── Room code & URL parsing tests
+│   │
+│   └── widget_test.dart
+│       └── Room flow & UI widget tests
+│
+└── LICENSE
 ```
 
 ---
 
-## 🧪 Testing
+# 🧪 Testing
 
-Run Flutter analyzer and unit/widget test suites:
+Run Flutter's static analyzer:
 
 ```bash
-# Verify static code analysis (0 errors)
 flutter analyze
+```
 
-# Run all widget & unit tests
+Run the complete unit and widget test suite:
+
+```bash
 flutter test -j 1
 ```
 
 ---
 
-## 🤝 Contributing
+# 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/CuteFeature`).
-3. Commit your Changes (`git commit -m 'Add some CuteFeature'`).
-4. Push to the Branch (`git push origin feature/CuteFeature`).
-5. Open a Pull Request.
+
+### 1. Fork the Project
+
+Create your own fork of the repository.
+
+### 2. Create a Feature Branch
+
+```bash
+git checkout -b feature/CuteFeature
+```
+
+### 3. Commit Your Changes
+
+```bash
+git add .
+git commit -m "Add some CuteFeature"
+```
+
+### 4. Push the Branch
+
+```bash
+git push origin feature/CuteFeature
+```
+
+### 5. Open a Pull Request
+
+Open a Pull Request on GitHub describing your changes.
 
 ---
 
-## 📄 License
+# 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for more information.
+
+---
 
 <div align="center">
 
-Crafted with 💖 and 🍓 pixels by [Isha Nayal](https://github.com/IshaNayal)
+### 🎀 Crafted with 💖 and 🍓 pixels by Isha Nayal
+
+**Draw • Guess • Laugh • Repeat 🎨✨**
 
 </div>
+
