@@ -1,4 +1,4 @@
-# 🎀 Skribbl.io — Cute Pink Pixel Art Edition 🎨💖
+# 🎀 Skribbl.io : Cute Pink Pixel Art Edition 🎨💖
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 **A real-time multiplayer drawing and guessing game built with Flutter and Node.js, styled in an adorable retro Japanese kawaii pixel-art theme.**
 
-[Features](#-key-features) • [Quick Start](#-quick-start) • [Global Multiplayer](#-playing-across-the-globe) • [Architecture](#-architecture) • [Theme Guide](#-cute-pixel-art-theme)
+[Features](#-key-features) • [Quick Start](#-quick-start) • [Global Multiplayer](#-playing-across-the-globe) •  [Architecture](#architecture)  • [Theme Guide](#-cute-pixel-art-theme)
 
 </div>
 
@@ -92,11 +92,8 @@ Whether you're playing together on the same Wi-Fi network or across different co
 
 ## 📸 Screenshots & UI Showcase
 
-### 🎀 Logo
 
-<img width="655" height="527" alt="Skribbl.io Logo" src="https://github.com/user-attachments/assets/36645052-b6fc-45ac-8107-8a0aa71837eb" />
 
-### 🏠 Home Screen
 
 |                                                             🎀 Logo                                                             |                                       🍓 Light Mode                                      |                                      🌙 Dark Mode                                      |
 | :-----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
@@ -104,7 +101,7 @@ Whether you're playing together on the same Wi-Fi network or across different co
 
 ### 🎮 Room Creation & Joining
 
-|                                   🎲 Create Room — Light                                  |                                     🌙 Create Room — Dark                                     |                                  🏷️ Join Room                                  |
+|                                   🎲 Create Room : Light                                  |                                     🌙 Create Room : Dark                                     |                                  🏷️ Join Room                                  |
 | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
 | <img src="docs/screenshots/create_room.png" alt="Create Room - Light Mode" width="260" /> | <img src="docs/screenshots/create_room_dark.png" alt="Create Room - Dark Mode" width="260" /> | <img src="docs/screenshots/join_room.png" alt="Join Room Screen" width="260" /> |
 
@@ -119,7 +116,7 @@ Whether you're playing together on the same Wi-Fi network or across different co
 
 ---
 
-## 🏗️ Architecture
+#  Architecture
 
 ```mermaid
 flowchart TD
@@ -260,7 +257,7 @@ flutter run -d android
 
 You can host a game and invite friends from different Wi-Fi networks, mobile data connections, or countries without configuring traditional port forwarding.
 
-## ☁️ Option A — Cloudflare Tunnel
+## ☁️ Option A : Cloudflare Tunnel
 
 Cloudflare Tunnel is the recommended option for quick testing.
 
@@ -289,7 +286,7 @@ https://random-subdomain.trycloudflare.com
 
 ---
 
-## 🔗 Option B — ngrok
+## 🔗 Option B : ngrok
 
 If you prefer ngrok:
 
